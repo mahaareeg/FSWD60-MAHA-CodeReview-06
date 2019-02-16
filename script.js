@@ -24,7 +24,7 @@ var locations = /** @class */ (function () {
         this.img = img;
     }
     locations.prototype.text = function () {
-        return "Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + ", " + this.img;
+        return "Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + ", <img src=\"" + this.image + "\"";
     };
     return locations;
 }());
@@ -34,16 +34,16 @@ var places = /** @class */ (function (_super) {
     __extends(places, _super);
     function places(city, zipCode, address, name, img, historic) {
         var _this = _super.call(this, city, zipCode, address, name, img) || this;
-        _this.historic = ";";
+        _this.historic = "";
         _this.historic = historic;
         return _this;
     }
     places.prototype.text1 = function () {
-        return "<h2> Places: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + " " + this.img + ", " + this.historic + " ";
+        return "<h2> Places: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", " + this.img + ", " + this.historic + " ";
     };
     return places;
 }(locations));
-var info11 = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img src='../img/St-Charles.JPG'", "Church");
+var info11 = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img/St-Charles.JPG'", "Church");
 var info13 = new places("Vienna", 1130, "Maxingstraße 13 b", "Schoenbrunn-Zoo Vienna", "img src='../img/zoo.JPG'", "Zoo");
 document.write(info11.text1());
 document.write(info13.text1());
