@@ -24,7 +24,7 @@ var locations = /** @class */ (function () {
         this.img = img;
     }
     locations.prototype.text = function () {
-        return "Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + ", <img src=\"" + this.img + "\">";
+        return "<h1> VIENNA-AUSTRIA </h1> <p>Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", <br>where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + "</p>,<div class=\"image\"> <img src=\"" + this.img + "\"></div>";
     };
     return locations;
 }());
@@ -41,15 +41,18 @@ var places = /** @class */ (function (_super) {
     places.prototype.text1 = function () {
         return "<h2> Places: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.historic + " ";
     };
+    places.prototype.text343 = function () {
+        return "<h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.historic + " ";
+    };
     return places;
 }(locations));
 var info11 = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img/St-Charles.JPG", "Church");
 var info13 = new places("Vienna", 1130, "Maxingstraße 13 b", "Schoenbrunn-Zoo Vienna", "img/zoo.JPG", "Zoo");
 document.write(info11.text1());
-document.write(info13.text1());
+document.write(info13.text343());
 var resturants = /** @class */ (function (_super) {
     __extends(resturants, _super);
-    function resturants(city, zipCode, address, img, name, telephone) {
+    function resturants(city, zipCode, address, name, img, telephone) {
         var _this = _super.call(this, city, zipCode, address, name, img) || this;
         _this.telephone = telephone;
         return _this;
@@ -57,12 +60,15 @@ var resturants = /** @class */ (function (_super) {
     resturants.prototype.rest22 = function () {
         return "<h2> Resturants: </h2> <br> <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ", <img src=\"" + this.img + "\">, " + this.telephone + " ";
     };
+    resturants.prototype.restt444 = function () {
+        return "<br> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ", <img src=\"" + this.img + "\">, " + this.telephone + " ";
+    };
     return resturants;
 }(locations));
 var inforce = new resturants("Vienna", 1050, "Kettenbrückengasse 19", "Lemon Leaf Thai Restaurant", "img/lemonleaf.jpg", 4315812308);
 var infart = new resturants("Vienna", 1050, "Schönbrunner Straße 21", "SIXTA Restaurant", "img/sixta.jpg", 4315852856);
 document.write(inforce.rest22());
-document.write(infart.rest22());
+document.write(infart.restt444());
 var events = /** @class */ (function (_super) {
     __extends(events, _super);
     function events(city, zipCode, address, name, img, appointment, price) {
@@ -76,12 +82,15 @@ var events = /** @class */ (function (_super) {
     events.prototype.evenn = function () {
         return "<h2> Events: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " ";
     };
+    events.prototype.evenn22 = function () {
+        return " <br>  <br> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " ";
+    };
     return events;
 }(locations));
 var infoeve22 = new events("Vienna", 1150, "Roland Rainer Platz 1", "Kris Kristofferson", "img/KrisK.JPG", "Fr. 15.11.2019. 20:00", "58.50 EUR");
 var infoeve333 = new events("Vienna", 1150, "Roland Rainer Platz 1", "Lenny Kravitz", "img/Lenny.JPG", "Sat 09.12.2019 19:30", "€ 47.80");
 document.write(infoeve22.evenn());
-document.write(infoeve333.evenn());
+document.write(infoeve333.evenn22());
 var alllocations = new Array();
 alllocations[0] = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img/St-Charles.JPG", "Church");
 alllocations[1] = new places("Vienna", 1130, "Maxingstraße 13 b", "Schoenbrunn-Zoo Vienna", "img/zoo.JPG", "Zoo");
