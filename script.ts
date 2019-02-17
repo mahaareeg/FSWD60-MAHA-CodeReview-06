@@ -19,13 +19,13 @@
 
 
  text(){
-  return `<h1> VIENNA-AUSTRIA </h1> <p>Welcome to the beutiful city ${this.city}, especially the first district ${this.zipCode}, <br>where you could see different historic places like St. Charles Church in ${this.address}, in ${this.name}</p>,<div class="image"> <img src="${this.img}"></div>`;
+  return `<div class="container"> <h1> VIENNA-AUSTRIA </h1> <p>Welcome to the beutiful city ${this.city}, especially the first district ${this.zipCode}, <br>where you could see different historic places like St. Charles Church in ${this.address}, in ${this.name}</p>,<div class="image"> <img src="${this.img}"></div> </div>`;
  }
 
  }
 
 
-  var info = new locations("Vienna", 1010, "Karlsplatz 1","Vienna City", "img/vienna.jpg"); 
+  var info = new locations("Vienna", 1010, "Karlsplatz 1","Vienna City", "img/vienna.jpg");  
   document.write(info.text());
 
  class places extends locations {
@@ -38,13 +38,13 @@ constructor(city, zipCode, address, name, img, historic){
 
 }
 text1(){
-	return `<h2> Places: </h2> <br>  <h4> • ${this.name}</h4><br> • 
- ${this.address}, ${this.zipCode}, ${this.city}, <img src="${this.img}">, ${this.historic} `;
+	return `<br><br> <div class="row"> <div class="col-lg-3 col-md-6 col-sm-12"> <h2> Places: </h2></div><div class="col-lg-3 col-md-6 col-sm-12">  <h4> • ${this.name}</h4> </div> <div class="col-lg-3 col-md-6 col-sm-12"> • 
+ ${this.address}, ${this.zipCode}, ${this.city}, </div><div class="col-lg-3 col-md-6 col-sm-12"><img src="${this.img}">, ${this.historic} </div></div> `;
 }
 
 text343(){
-	return `<h4> • ${this.name}</h4><br> • 
- ${this.address}, ${this.zipCode}, ${this.city}, <img src="${this.img}">, ${this.historic} `;
+	return `<br>  <br> <div class="row"><div class="col-lg-3 col-md-6 col-sm-12"> <p> </p></div> <div class="col-lg-3 col-md-6 col-sm-12"> <h4> • ${this.name}</h4> </div> <div class="col-lg-3 col-md-6 col-sm-12">• 
+ ${this.address}, ${this.zipCode}, ${this.city},</div> <div class="col-lg-3 col-md-6 col-sm-12"> <img src="${this.img}">, ${this.historic} </div></div> `;
 }
 
 }
@@ -71,11 +71,11 @@ text343(){
  	}
 
  	rest22(){
-	return  `<h2> Resturants: </h2> <br> <h4> • ${this.name}</h4><br> • ${this.address}, ${this.zipCode},${this.city}, <img src="${this.img}">, ${this.telephone} `;
+	return  `<br> <br> <div class="row"> <div class="col-lg-3 col-md-6 col-sm-12"> <h2> Resturants: </h2></div> <div class="col-lg-3 col-md-6 col-sm-12">  <h4> • ${this.name}</h4> </div> <div class="col-lg-3 col-md-6 col-sm-12"> • ${this.address}, ${this.zipCode},${this.city},</div> <div class="col-lg-3 col-md-6 col-sm-12"> <img src="${this.img}">, ${this.telephone} </div></div> `;
 
  }
 restt444(){
-    return  `<br> • ${this.name}</h4><br> • ${this.address}, ${this.zipCode},${this.city}, <img src="${this.img}">, ${this.telephone} `;
+    return  `<br>  <br> <div class="row"><div class="col-lg-3 col-md-6 col-sm-12"> <p> </p></div> <div class="col-lg-3 col-md-6 col-sm-12"> • ${this.name}</h4></div> <div class="col-lg-3 col-md-6 col-sm-12"> • ${this.address}, ${this.zipCode},${this.city},</div> <div class="col-lg-3 col-md-6 col-sm-12"> <img src="${this.img}">, ${this.telephone} </div></div> `;
 
   }
  
@@ -107,11 +107,11 @@ restt444(){
 
  }
  evenn(){
-	return `<h2> Events: </h2> <br>  <h4> • ${this.name}</h4><br> • ${this.address}, ${this.zipCode}, ${this.city}, <img src="${this.img}">, ${this.appointment}, ${this.price} `;
+	return `<br><br> <div class="row"> <div class="col-lg-3 col-md-6 col-sm-12"><h2> Events: </h2></div> <div class="col-lg-3 col-md-6 col-sm-12">  <h4> • ${this.name}</h4></div>  <div class="col-lg-3 col-md-6 col-sm-12"> • ${this.address}, ${this.zipCode}, ${this.city}, </div> <div class="col-lg-3 col-md-6 col-sm-12"> <img src="${this.img}">, ${this.appointment}, ${this.price} </div></div>`;
 }
  
 evenn22(){
-	return ` <br>  <br> • ${this.name}</h4><br> • ${this.address}, ${this.zipCode}, ${this.city}, <img src="${this.img}">, ${this.appointment}, ${this.price} `;
+	return ` <br>  <br> <div class="row"> <div class="col-lg-3 col-md-6 col-sm-12"> <p> </p> </div> <div class="col-lg-3 col-md-6 col-sm-12">• ${this.name}</h4></div> <div class="col-lg-3 col-md-6 col-sm-12"> • ${this.address}, ${this.zipCode}, ${this.city}, </div> <div class="col-lg-3 col-md-6 col-sm-12"> <img src="${this.img}">, ${this.appointment}, ${this.price} </div></div> `;
 }
 
 }
@@ -121,15 +121,6 @@ var infoeve22 = new events("Vienna", 1150,  "Roland Rainer Platz 1", "Kris Krist
   document.write(infoeve22.evenn());
   document.write(infoeve333.evenn22());
 
-
-var alllocations = new Array();
-
-alllocations[0] = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img/St-Charles.JPG", "Church");
-alllocations[1] = new places("Vienna", 1130, "Maxingstraße 13 b", "Schoenbrunn-Zoo Vienna", "img/zoo.JPG", "Zoo");
-alllocations[2] = new resturants("Vienna", 1050, "Kettenbrückengasse 19", "Lemon Leaf Thai Restaurant", "img/lemonleaf.jpg", 4315812308);
-alllocations[3] = new resturants("Vienna", 1050, "Schönbrunner Straße 21 ", "SIXTA Restaurant", "img/sixta.jpg", 4315852856);
-alllocations[4] = new events("Vienna", 1150,  "Roland Rainer Platz 1", "Kris Kristofferson", "img/KrisK.jpg", "Fr. 15.11.2019. 20:00", "58.50 EUR");
-alllocations[5] = new events("Vienna", 1150, "Roland Rainer Platz 1", "Lenny Kravitz", "img/Lenny.jpg", "Sat 09.12.2019 19:30", "€ 47.80");
 
 
 

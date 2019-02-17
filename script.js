@@ -24,7 +24,7 @@ var locations = /** @class */ (function () {
         this.img = img;
     }
     locations.prototype.text = function () {
-        return "<h1> VIENNA-AUSTRIA </h1> <p>Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", <br>where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + "</p>,<div class=\"image\"> <img src=\"" + this.img + "\"></div>";
+        return "<div class=\"container\"> <h1> VIENNA-AUSTRIA </h1> <p>Welcome to the beutiful city " + this.city + ", especially the first district " + this.zipCode + ", <br>where you could see different historic places like St. Charles Church in " + this.address + ", in " + this.name + "</p>,<div class=\"image\"> <img src=\"" + this.img + "\"></div> </div>";
     };
     return locations;
 }());
@@ -39,10 +39,10 @@ var places = /** @class */ (function (_super) {
         return _this;
     }
     places.prototype.text1 = function () {
-        return "<h2> Places: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.historic + " ";
+        return "<br><br> <div class=\"row\"> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <h2> Places: </h2></div><div class=\"col-lg-3 col-md-6 col-sm-12\">  <h4> \u2022 " + this.name + "</h4> </div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", </div><div class=\"col-lg-3 col-md-6 col-sm-12\"><img src=\"" + this.img + "\">, " + this.historic + " </div></div> ";
     };
     places.prototype.text343 = function () {
-        return "<h4> \u2022 " + this.name + "</h4><br> \u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.historic + " ";
+        return "<br>  <br> <div class=\"row\"><div class=\"col-lg-3 col-md-6 col-sm-12\"> <p> </p></div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <h4> \u2022 " + this.name + "</h4> </div> <div class=\"col-lg-3 col-md-6 col-sm-12\">\u2022\u200A\n " + this.address + ", " + this.zipCode + ", " + this.city + ",</div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <img src=\"" + this.img + "\">, " + this.historic + " </div></div> ";
     };
     return places;
 }(locations));
@@ -58,10 +58,10 @@ var resturants = /** @class */ (function (_super) {
         return _this;
     }
     resturants.prototype.rest22 = function () {
-        return "<h2> Resturants: </h2> <br> <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ", <img src=\"" + this.img + "\">, " + this.telephone + " ";
+        return "<br> <br> <div class=\"row\"> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <h2> Resturants: </h2></div> <div class=\"col-lg-3 col-md-6 col-sm-12\">  <h4> \u2022 " + this.name + "</h4> </div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ",</div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <img src=\"" + this.img + "\">, " + this.telephone + " </div></div> ";
     };
     resturants.prototype.restt444 = function () {
-        return "<br> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ", <img src=\"" + this.img + "\">, " + this.telephone + " ";
+        return "<br>  <br> <div class=\"row\"><div class=\"col-lg-3 col-md-6 col-sm-12\"> <p> </p></div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022 " + this.name + "</h4></div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022\u200A" + this.address + ", " + this.zipCode + "," + this.city + ",</div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <img src=\"" + this.img + "\">, " + this.telephone + " </div></div> ";
     };
     return resturants;
 }(locations));
@@ -80,10 +80,10 @@ var events = /** @class */ (function (_super) {
         return _this;
     }
     events.prototype.evenn = function () {
-        return "<h2> Events: </h2> <br>  <h4> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " ";
+        return "<br><br> <div class=\"row\"> <div class=\"col-lg-3 col-md-6 col-sm-12\"><h2> Events: </h2></div> <div class=\"col-lg-3 col-md-6 col-sm-12\">  <h4> \u2022 " + this.name + "</h4></div>  <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", </div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " </div></div>";
     };
     events.prototype.evenn22 = function () {
-        return " <br>  <br> \u2022 " + this.name + "</h4><br> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " ";
+        return " <br>  <br> <div class=\"row\"> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <p> </p> </div> <div class=\"col-lg-3 col-md-6 col-sm-12\">\u2022 " + this.name + "</h4></div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> \u2022\u200A" + this.address + ", " + this.zipCode + ", " + this.city + ", </div> <div class=\"col-lg-3 col-md-6 col-sm-12\"> <img src=\"" + this.img + "\">, " + this.appointment + ", " + this.price + " </div></div> ";
     };
     return events;
 }(locations));
@@ -91,10 +91,3 @@ var infoeve22 = new events("Vienna", 1150, "Roland Rainer Platz 1", "Kris Kristo
 var infoeve333 = new events("Vienna", 1150, "Roland Rainer Platz 1", "Lenny Kravitz", "img/Lenny.JPG", "Sat 09.12.2019 19:30", "€ 47.80");
 document.write(infoeve22.evenn());
 document.write(infoeve333.evenn22());
-var alllocations = new Array();
-alllocations[0] = new places("Vienna", 1010, "Karlsplatz 1", "St. Charles Church", "img/St-Charles.JPG", "Church");
-alllocations[1] = new places("Vienna", 1130, "Maxingstraße 13 b", "Schoenbrunn-Zoo Vienna", "img/zoo.JPG", "Zoo");
-alllocations[2] = new resturants("Vienna", 1050, "Kettenbrückengasse 19", "Lemon Leaf Thai Restaurant", "img/lemonleaf.jpg", 4315812308);
-alllocations[3] = new resturants("Vienna", 1050, "Schönbrunner Straße 21 ", "SIXTA Restaurant", "img/sixta.jpg", 4315852856);
-alllocations[4] = new events("Vienna", 1150, "Roland Rainer Platz 1", "Kris Kristofferson", "img/KrisK.jpg", "Fr. 15.11.2019. 20:00", "58.50 EUR");
-alllocations[5] = new events("Vienna", 1150, "Roland Rainer Platz 1", "Lenny Kravitz", "img/Lenny.jpg", "Sat 09.12.2019 19:30", "€ 47.80");

@@ -33,6 +33,17 @@ p{
 	width: 100%;
 }
  img{
-	width: 350px;
+	width: 330px;
 	height: 300px;
+}
+
+.row {
+	width: 1320px;
+	height: 350px;
+}
+.col{
+	width: 350px;
+	height: 330px;
+
+
 }
